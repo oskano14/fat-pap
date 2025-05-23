@@ -1,0 +1,9 @@
+# streamlit
+# mistralai
+# python-dotenv
+# requests
+ pybase64
+streamlit==1.45.1
+mistralai==1.7.1
+python-dotenv==1.1.0
+requests==2.32.3
