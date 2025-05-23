@@ -6,6 +6,16 @@ from mistralai import Mistral
 from dotenv import load_dotenv
 load_dotenv()
 
+
+try:
+    r = requests.get("https://example.com/file.jpg", timeout=10)
+    r.raise_for_status()
+    with open("file.jpg", "wb") as f:
+        f.write(r.content)
+except requests.exceptions.RequestException as e:
+    print("Oups, une erreur s'est produite :", e)
+
+
 def encode_image(image_path):
     """Encode the image to base64."""
     try:
